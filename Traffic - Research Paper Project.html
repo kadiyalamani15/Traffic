@@ -1,0 +1,632 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Traffic - Research Paper/Project</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="c8763e89-712e-4fea-976b-d45e6714d254" class="page sans"><header><h1 class="page-title">Traffic - Research Paper/Project</h1></header><div class="page-body"><p id="a9d9b72b-5fd4-4bdb-b95d-41cbaefb7b70" class="">Problem Statement:</p><p id="56951487-f798-46b5-971e-60e498d04ba1" class="">Analyzing Traffic video to extract vehicle count based on vehicle classification. Main focus: Analyzing the video, no matter what is the angle of the video.</p><p id="55390480-b98f-4ba2-9ced-ed95834a783c" class="">
+</p><h3 id="762496e1-3100-4138-8c31-b1e2578bd599" class="">Task 1:</h3><p id="dad4a99e-34dd-4ae0-80e5-ba47c85620e2" class="">How to classify vehicles</p><h3 id="99329e27-e13c-45cd-a60e-88a7f278f498" class="">Task 2:</h3><p id="377d652c-a021-4863-be7b-694c8ba3a21a" class="">Extract Vehicle Count</p><h3 id="741f16ab-7355-4d16-89e8-52d1ee6bda71" class="">Task 3:</h3><p id="13c02bc0-77bc-4091-a5d2-fd27c105154b" class="">Vehicle count data as per lanes present in the video </p><p id="5db793c8-1135-43cc-9329-063d92208722" class="">
+</p><blockquote id="67009945-fb01-447d-a953-4aa1e461ccae" class="">Technology Used: Computer Vision (CV)</blockquote><blockquote id="bd3c0caf-70db-4034-8060-248dc483d71c" class="">Mostly used Package: openCV</blockquote><blockquote id="efcdb9ba-9717-4d74-a35c-d5a302ab34d2" class="">Skill Set required</blockquote><ol id="efd4252d-f853-4a49-9f11-b6e55c74fc01" class="numbered-list" start="1"><li>Image Processing</li></ol><ol id="2895b239-6c16-449c-9893-c209360df4ff" class="numbered-list" start="2"><li>Backend Development</li></ol><ol id="3c18e2d7-8ee5-4eab-8954-7a71bc637bca" class="numbered-list" start="3"><li>Frontend Development</li></ol><ol id="1896b96f-d298-4327-bf19-c579de6c9f7b" class="numbered-list" start="4"><li>Cloud Deployment</li></ol><p id="5c251b55-ef5c-4a22-90fe-f80ed54b0b7c" class="">
+</p><p id="5922e7c3-3757-4eb4-b3ee-f116fae6f8f7" class="">
+</p><h3 id="6ad26ff8-c1f4-49f6-8d68-7c9a093b9d2e" class="">Resources:</h3><figure id="27c52d88-5daa-44d4-9ac4-59b7e894b3b1"><a href="https://youtu.be/MLR2wbmjRQE" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Classification &amp; specification of Vehicle||L2||AE</div><div class="bookmark-description">To download our notes please visit on my website link given below, don&#x27;t forget to subscribe my channel or like it SSC-JE &amp; RRB-JE(Mechanical) Full syllabus ...</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/a6851e29/img/favicon.ico" class="icon bookmark-icon"/>https://youtu.be/MLR2wbmjRQE</div></div><img src="https://i.ytimg.com/vi/MLR2wbmjRQE/hqdefault.jpg" class="bookmark-image"/></a><figcaption>Domain Knowledge </figcaption></figure><figure id="01447c5e-3210-4dc3-80ea-0c5b806727b3"><a href="https://www.youtube.com/watch?v=ONgktXxGIJo" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">vehicle counting and classification using image processing by opencv python</div><div class="bookmark-description">for more information leave ur email id in the comment section share and subscribe to get more informative videos. download section https://github.com/VisionF...</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/a6851e29/img/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=ONgktXxGIJo</div></div><img src="https://i.ytimg.com/vi/ONgktXxGIJo/hqdefault.jpg" class="bookmark-image"/></a></figure><figure id="07cb87b8-419d-44bc-b898-b331ac49cedd"><a href="https://www.youtube.com/watch?v=19vaot75JCY" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Object tracking in video with OpenCV and Deep Learning</div><div class="bookmark-description">Use PowerAI Vision with automatic labeling to create a model from a video, then use the model to annotate a video with a Jupyter notebook. Pattern: https://d...</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/a6851e29/img/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=19vaot75JCY</div></div><img src="https://i.ytimg.com/vi/19vaot75JCY/hqdefault.jpg" class="bookmark-image"/></a></figure><figure id="1d5acc41-ce99-44c4-9c52-e64c28e48157"><a href="https://www.youtube.com/watch?v=MvPY1CBapE4" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Automated vehicle classification, tracking and speed estimation</div><div class="bookmark-description">Source code: https://github.com/JdeRobot/traffic-monitor Automatic vehicle tracking/classification and speed estimation using a simple camera. The vehicles a...</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/a6851e29/img/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=MvPY1CBapE4</div></div><img src="https://i.ytimg.com/vi/MvPY1CBapE4/hqdefault.jpg" class="bookmark-image"/></a></figure><figure id="371a2753-7d47-48a0-8077-af204150ef27"><a href="https://www.youtube.com/watch?v=mcNPld9wsIo" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Vehicle Counting and Classification #Test0</div><div class="bookmark-description">Testing YOLOv3 architecture for object detection and SORT for object tracking. Developing using PyTorch Deep Learning Framework, OpenCV for loading and savin...</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/a6851e29/img/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=mcNPld9wsIo</div></div><img src="https://i.ytimg.com/vi/mcNPld9wsIo/hqdefault.jpg" class="bookmark-image"/></a></figure><figure id="f1f74da8-7f1b-4a9c-acd2-6adbe38bb43f"><a href="https://www.youtube.com/watch?v=NmcIzqJK1-U" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">LANE VEHICLE COUNTING FROM A UAV</div><div class="bookmark-description">LANE VEHICLE COUNTING FROM A UAV - Implemented using OpenCV and Python The Algorithm: - A moving average of the image is formed to construct a background ima...</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/a6851e29/img/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=NmcIzqJK1-U</div></div><img src="https://i.ytimg.com/vi/NmcIzqJK1-U/hqdefault.jpg" class="bookmark-image"/></a><figcaption>End Goal</figcaption></figure><figure id="7d44cf7d-0c7f-47f0-bc7d-40e557edfd3a"><a href="https://www.youtube.com/watch?v=uLsDljlwuak" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">TIC501 Pro: Reliable counting and classification of vehicles over several lanes | SICK AG</div><div class="bookmark-description">Product informatin: http://www.sick.com/TIC501_Pro The TIC501 Pro (Traffic Information Collector) profiling system is designed for traffic management and sta...</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/a6851e29/img/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=uLsDljlwuak</div></div><img src="https://i.ytimg.com/vi/uLsDljlwuak/hqdefault.jpg" class="bookmark-image"/></a><figcaption>Another Aspect of how to approach this problem</figcaption></figure><figure id="20bf2dc9-3e6c-4ec8-b8af-d97658a3f92d"><a href="https://www.youtube.com/watch?v=92RTneVhRV4" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Counting and calculating the density of the Vehicles with OpenCV 4.0 Java</div><div class="bookmark-description">This video shows a simple system that is used to count the vehicles and calculate the density of the Vehicles.</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/a6851e29/img/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=92RTneVhRV4</div></div><img src="https://i.ytimg.com/vi/92RTneVhRV4/hqdefault.jpg" class="bookmark-image"/></a><figcaption>Frontend Development example</figcaption></figure><figure id="5a406a1e-f336-49f3-9cdf-9b92da7bf93a"><a href="https://www.youtube.com/watch?v=cyNKepIPEP4" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">OpenCV Projects : Vehicle Classification OpenCV (python)</div><div class="bookmark-description">Using SVM to train and recognize vehicle according to their class such as HTV LTV MTV . And then counting them over traffic video feed using python and openC...</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/a6851e29/img/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=cyNKepIPEP4</div></div><img src="https://i.ytimg.com/vi/cyNKepIPEP4/hqdefault.jpg" class="bookmark-image"/></a></figure><p id="15d1cabc-8f83-4c80-bf6f-789a4e665220" class="">
+</p><blockquote id="ca7e90e4-89c2-4c3a-9bb0-729f4abc6260" class="">Research Papers</blockquote><figure id="da8f135c-4948-4adc-baad-b203568d12e9"><div class="source"><a href="Traffic%20-%20Research%20Paper%20Project%20da8f135c49484adcbaadb203568d12e9/5B1407617920-20Transport20and20Telecommunication20Journal5D20Real-Time20System20Based20on20Feature20Extraction20for20Vehicle20Detection20and20Classification.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e17233b0-34a5-44f4-8a02-e0a73a88e8a2/5B1407617920-20Transport20and20Telecommunication20Journal5D20Real-Time20System20Based20on20Feature20Extraction20for20Vehicle20Detection20and20Classification.pdf</a></div></figure><figure id="ca5e9683-be23-451c-bdef-c33b1be1a462"><div class="source"><a href="Traffic%20-%20Research%20Paper%20Project%20da8f135c49484adcbaadb203568d12e9/5B1407617920-20Transport20and20Telecommunication20Journal5D20Real-Time20Video20Surveillance20System20for20Traffic20Management20with20Background20Subtraction20Using20Codebook20Model20and20Occlusion20Handling.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/38c098bd-9042-456c-9019-b4fce946dbea/5B1407617920-20Transport20and20Telecommunication20Journal5D20Real-Time20Video20Surveillance20System20for20Traffic20Management20with20Background20Subtraction20Using20Codebook20Model20and20Occlusion20Handling.pdf</a></div></figure><figure id="0560d12d-77a6-4a3f-8d6e-11e487722013"><div class="source"><a href="Traffic%20-%20Research%20Paper%20Project%20da8f135c49484adcbaadb203568d12e9/07100903.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b52a4518-43d2-443e-9cb2-9b707129cfc5/07100903.pdf</a></div></figure><figure id="28a4761c-79e8-4c60-bf8e-b5fd124b2f7f"><div class="source"><a href="Traffic%20-%20Research%20Paper%20Project%20da8f135c49484adcbaadb203568d12e9/08703814.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/df6cf4d9-58ed-4bad-b76b-12b42a17664a/08703814.pdf</a></div></figure><figure id="0edf1fa1-38f8-4711-84c7-ed9593b85c1e"><div class="source"><a href="Traffic%20-%20Research%20Paper%20Project%20da8f135c49484adcbaadb203568d12e9/26779112.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c0e8381f-e9b4-43fa-b6c1-88c71825c422/26779112.pdf</a></div></figure><figure id="00f4ed5b-55c2-48ff-84fb-48d5a26320bf"><div class="source"><a href="Traffic%20-%20Research%20Paper%20Project%20da8f135c49484adcbaadb203568d12e9/82054378.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2318426c-299b-47fe-a6e5-603bc820b436/82054378.pdf</a></div></figure><figure id="6421b4f3-b255-43af-ab38-1722fb802bd5"><div class="source"><a href="Traffic%20-%20Research%20Paper%20Project%20da8f135c49484adcbaadb203568d12e9/129780549.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/62d1d33d-a17c-4ef0-b849-6bc2b5c7a7c7/129780549.pdf</a></div></figure><figure id="aaa632ef-dc70-4670-b071-2e7d4f0bf930"><div class="source"><a href="Traffic%20-%20Research%20Paper%20Project%20da8f135c49484adcbaadb203568d12e9/159127941.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6aa61eee-d931-4dbe-a0ea-d13799fca28b/159127941.pdf</a></div></figure><figure id="e7557af3-a336-4e0b-a5f2-b8c33a60df35"><div class="source"><a href="Traffic%20-%20Research%20Paper%20Project%20da8f135c49484adcbaadb203568d12e9/188217040.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e2c32a93-3b29-41bc-91d7-e737b61ebd4a/188217040.pdf</a></div></figure><figure id="2d426882-37ad-4f6d-afb1-8f539a2e05ec"><div class="source"><a href="Traffic%20-%20Research%20Paper%20Project%20da8f135c49484adcbaadb203568d12e9/212493711.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6d36d90c-8643-4b3f-a9fd-c28eceea87ca/212493711.pdf</a></div></figure><figure id="3c07a0c4-4eda-47c9-92f7-011914b150c7"><div class="source"><a href="Traffic%20-%20Research%20Paper%20Project%20da8f135c49484adcbaadb203568d12e9/301109170.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e8c75406-19fa-412a-96e7-40464597c398/301109170.pdf</a></div></figure><figure id="40e45b8e-9e52-4770-984b-e2f57f16eaad"><div class="source"><a href="Traffic%20-%20Research%20Paper%20Project%20da8f135c49484adcbaadb203568d12e9/20131230030637936.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d5d22e44-15f2-4ac6-9bd8-73349b659888/20131230030637936.pdf</a></div></figure><figure id="cc59d1cb-4a1b-4ad4-9955-1b88a8b8a7b8"><div class="source"><a href="Traffic%20-%20Research%20Paper%20Project%20da8f135c49484adcbaadb203568d12e9/Ambardekar2014_Article_VehicleClassificationFramework.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7c290241-928d-4345-884f-1e991a5d3818/Ambardekar2014_Article_VehicleClassificationFramework.pdf</a></div></figure><figure id="59a2d279-110e-4c6e-97ba-ecfdb4becc89"><div class="source"><a href="Traffic%20-%20Research%20Paper%20Project%20da8f135c49484adcbaadb203568d12e9/httpwww_itl_waw_plczasopismajtit2008143.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1bceb837-9bf6-4e4c-a16b-153f456e5416/httpwww_itl_waw_plczasopismajtit2008143.pdf</a></div></figure><figure id="95fba4b7-7198-494b-85b4-b88f0e631799"><div class="source"><a href="Traffic%20-%20Research%20Paper%20Project%20da8f135c49484adcbaadb203568d12e9/sensors-20-04679.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6d1a5b6f-4c2e-43a8-93b3-ec0ae56a43f8/sensors-20-04679.pdf</a></div></figure><figure id="4df33abc-8722-47c4-9836-d55167fa36d0"><div class="source"><a href="Traffic%20-%20Research%20Paper%20Project%20da8f135c49484adcbaadb203568d12e9/SSRN-id3420232.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/34c04617-768a-434a-895c-6582a63461da/SSRN-id3420232.pdf</a></div></figure></div></article></body></html>
