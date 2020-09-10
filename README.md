@@ -20,6 +20,16 @@ Vehicle count data as per lanes present in the video
 3. Frontend Development  
 4. Cloud Deployment  
 
+
+### Medium Articles  
+1. [Vehicle Classification in Turning Movement Counts](https://medium.com/transportation-engineering-data-collection/vehicle-classification-in-turning-movement-counts-4ce6b59534fe)  
+2. [Analyzing Issues in Vehicle Classification Solution](https://medium.com/@bhrigs/analyzing-issues-in-vehicle-classification-and-counting-solution-57f29a84ec9f)  
+3. [Tutorial: Counting Road Traffic Capacity with OpenCV](https://medium.com/machine-learning-world/tutorial-counting-road-traffic-capacity-with-opencv-998580f1fbde)  
+4. [Practical Image Process with OpenCV](https://towardsdatascience.com/practical-image-process-with-opencv-8405772c603e)  
+5. [Detecting and Counting Objects with OpenCV](https://medium.com/analytics-vidhya/detecting-and-counting-objects-with-opencv-b0f59bc1e111)  
+6. [Tutorial: Making Road Traffic Counting App based on Computer Vision and OpenCV](https://medium.com/machine-learning-world/tutorial-making-road-traffic-counting-app-based-on-computer-vision-and-opencv-166937911660)  
+  
+  
 ### Youtube Links  
 1. [Classification and Specification of Vehicle](https://www.youtube.com/watch?v=MLR2wbmjRQE&feature=youtu.be)  
 2. [vehicle counting and classification using image processing by opencv python](https://www.youtube.com/watch?v=ONgktXxGIJo) 
