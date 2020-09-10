@@ -1,4 +1,6 @@
-# TRAFFIC - avi & mani  
+# TRAFFIC 
+by 
+Avinash & Manish   
   
 ### Problem Statement:
 Analyzing Traffic video to extract vehicle count based on vehicle classification. Main focus: Analyzing the video, no matter what is the angle of the video.
