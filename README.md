@@ -1,4 +1,24 @@
 # Traffic  
+  
+### Problem Statement:
+Analyzing Traffic video to extract vehicle count based on vehicle classification. Main focus: Analyzing the video, no matter what is the angle of the video.
+  
+### Task 1:
+How to classify vehicles  
+  
+### Task 2:
+Extract Vehicle Count
+  
+### Task 3:
+Vehicle count data as per lanes present in the video 
+
+> Technology Used: Computer Vision (CV)  
+> Mostly used Package: openCV  
+> Skill Set required:
+1. Image Processing  
+2. Backend Development  
+3. Frontend Development  
+4. Cloud Deployment  
 
 ### Youtube Links  
 1. [Classification and Specification of Vehicle](https://www.youtube.com/watch?v=MLR2wbmjRQE&feature=youtu.be)  
