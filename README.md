@@ -1,5 +1,16 @@
 # Traffic  
 
+### Youtube Links  
+1. [Classification and Specification of Vehicle](https://www.youtube.com/watch?v=MLR2wbmjRQE&feature=youtu.be)  
+2. [vehicle counting and classification using image processing by opencv python](https://www.youtube.com/watch?v=ONgktXxGIJo) 
+3. [Object tracking in video with OpenCV and Deep Learning](https://www.youtube.com/watch?v=19vaot75JCY)  
+4. [Automated vehicle classification, tracking and speed estimation](https://youtu.be/MvPY1CBapE4)  
+5. [Vehicle Counting and Classification](https://youtu.be/mcNPld9wsIo)  
+6. [LANE VEHICLE COUNTING FROM A UAV](https://youtu.be/NmcIzqJK1-U)  
+7. [TIC501 Pro: Reliable counting and classification of vehicles over several lanes | SICK AG](https://www.youtube.com/watch?v=uLsDljlwuak)  
+8. [Counting and calculating the density of the Vehicles with OpenCV 4.0 Java](https://www.youtube.com/watch?v=92RTneVhRV4)   
+9. [OpenCV Projects : Vehicle Classification OpenCV (python)](https://www.youtube.com/watch?v=cyNKepIPEP4)  
+  
 ### Research Papers  
 1. [Counting and CLassification of Highway Vehicles by Regression Analysis.pdf](https://github.com/kadiyalamani15/Traffic/blob/master/Traffic%20-%20Research%20Paper%20Project/07100903.pdf)  
 2. [Video-Based Vehicle Counting Framework.pdf](https://github.com/kadiyalamani15/Traffic/blob/master/Traffic%20-%20Research%20Paper%20Project/08703814.pdf)  
