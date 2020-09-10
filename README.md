@@ -7,7 +7,7 @@
 4. [Automated vehicle classification, tracking and speed estimation](https://youtu.be/MvPY1CBapE4)  
 5. [Vehicle Counting and Classification](https://youtu.be/mcNPld9wsIo)  
 6. [LANE VEHICLE COUNTING FROM A UAV](https://youtu.be/NmcIzqJK1-U)  
-7. [TIC501 Pro: Reliable counting and classification of vehicles over several lanes | SICK AG](https://www.youtube.com/watch?v=uLsDljlwuak)  
+7. [TIC501 Pro: Reliable counting and classification of vehicles over several lanes - SICK AG](https://www.youtube.com/watch?v=uLsDljlwuak)  
 8. [Counting and calculating the density of the Vehicles with OpenCV 4.0 Java](https://www.youtube.com/watch?v=92RTneVhRV4)   
 9. [OpenCV Projects : Vehicle Classification OpenCV (python)](https://www.youtube.com/watch?v=cyNKepIPEP4)  
   
