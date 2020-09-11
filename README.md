@@ -10,8 +10,8 @@ How to classify vehicles
 Extract Vehicle Count
   
 #### Task 3:
-Vehicle count data as per lanes present in the video 
-
+Vehicle count data as per lanes present in the video  
+  
 > Technology Used: Computer Vision (CV)  
 > Mostly used Package: openCV  
 > Skill Set required:
