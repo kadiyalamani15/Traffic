@@ -51,6 +51,27 @@ Vehicle detection and classification system can be used in the following applica
     * Vehicles’ data collection for safety evaluation purposes. Studies show high percentages of fatal accidents involved heavy vehicles (Avely et al., 2004).  
     * Road maintenance planning. Road wear is affected by weight of the vehicles and traffic flows (Hjort et al., 2008). Road with high traffic of heavy vehicles need to be maintained more frequently.    
     * Traffic management. Traffic congestion can be managed by allowing only light vehicles to travel on a particular road during peak hours.  
+
+   A vehicle detection and classification system can be used by the road archi- tects. The system is able to provide the number of vehicles and their classes using a particular stretch of the road. Road wear and safety are affected by the number of vehicles and their classes using the road. A large number of vehicle using the road will cause the road to wear faster. Heavy vehicles will also accelerate road wear. Hence, road architects need to take these information into consideration during planning and design stages. A more durable pavement type can be chosen for road with a lot of heavy vehicles. More frequent road maintenance can also be planned.  
+   
+   Developing a Vehicle Detection and Classification System required three main components. There are detection algorithm, tracking and counting algorithm, and classification algorithm.  
+   
+   #### Vehicle Detection  
+   There are many methods to detect vehicles. These methods can be categorized into intrusive and non-intrusive as described by Daubaras and Zilys (2012). An example of intrusive method is installation of inductive loop detector into the pavement surface. Non-intrusive methods can be further categorized into imaging and non-imaging. Examples of non-imaging methods include using infrared sensor, microwave radar, and ultrasonic sensors. On the other hand, imaging methods include any use of digital image camera. Imaging method is a more preferable method because this method cost the least among non-intrusive methods as reported by Sun et al. (2004).  
+
+   #### Tracking And Counting
+   Tracking of moving objects from video sequences are usually done by tracking blobs (Magee, 2004). Blobs are collections of pixels that are connected together in an image. Hence, contours found from vehicle detection algorithm in this project can be used to track moving vehicles. This is because basically contours define blobs. The following shows a simple tracking and counting algorithm:
+    1. Capture current video sequences frame.
+    2. Find all detected moving objects contours.
+    3. Find nearest match of tracked object.
+    4. If nearest match found, then update the tracked object. 5. Else create a new tracked object.
+    6. Clean up tracked object list. Discard expired object.
+    7. Increment vehicle count counter when a vehicle is detected.  
+    
+   #### Hardware and Software Used
+   The vehicle detection and classification system consists of hardware and software components that process an input graphical signals such as video sequences from traffic surveillance camera into the number of vehicle and their type. The hardware required for this system includes a computer and a camera that are able to capture video sequences with at less 320x240 resolution at 25-30 frames per second (FPS). The software part of the system is developed using Microsoft Visual Studio with OpenCV library by IntelCorporation (2001).
+
+
 5. [Feature Extraction Analysis, Techniques and Issues in Vehicle Types Recognition.pdf](https://github.com/kadiyalamani15/Traffic/blob/master/Traffic%20-%20Research%20Paper%20Project/188217040.pdf)  
 6. [Moving Vehicle Detection for Measuring Traffic Count Using OpenCV.pdf](https://github.com/kadiyalamani15/Traffic/blob/master/Traffic%20-%20Research%20Paper%20Project/20131230030637936.pdf)  
 7. [Vehicle Detection and Speed Estimation for Automated Traffic Surveillance Systems at Night time.pdf](https://github.com/kadiyalamani15/Traffic/blob/master/Traffic%20-%20Research%20Paper%20Project/212493711.pdf)  
