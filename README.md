@@ -3,13 +3,13 @@
 ### Problem Statement:
 Analyzing Traffic video to extract vehicle count based on vehicle classification. Main focus: Analyzing the video, no matter what is the angle of the video.
   
-### Task 1:
+#### Task 1:
 How to classify vehicles  
   
-### Task 2:
+#### Task 2:
 Extract Vehicle Count
   
-### Task 3:
+#### Task 3:
 Vehicle count data as per lanes present in the video 
 
 > Technology Used: Computer Vision (CV)  
