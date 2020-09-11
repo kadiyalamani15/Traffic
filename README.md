@@ -47,10 +47,10 @@ Vehicle count data as per lanes present in the video
 3. [Robust Vehicle Counting with Severe Shadows and Occlusions.pdf](https://github.com/kadiyalamani15/Traffic/blob/master/Traffic%20-%20Research%20Paper%20Project/129780549.pdf)    
 4. [Overview of Vehicle Detection and Classification.pdf](https://github.com/kadiyalamani15/Traffic/blob/master/Traffic%20-%20Research%20Paper%20Project/159127941.pdf)    
 Vehicle detection and classification system can be used in the following applications:  
-  1. Transportation planning for traffic operation and pavement design (Avely et al., 2004). Differences in size, weight, and performance between light and heavy vehicle need to be considered during transportation planning.  
-  2. Vehicles’ data collection for safety evaluation purposes. Studies show high percentages of fatal accidents involved heavy vehicles (Avely et al., 2004).  
-  3. Road maintenance planning. Road wear is affected by weight of the vehicles and traffic flows (Hjort et al., 2008). Road with high traffic of heavy vehicles need to be maintained more frequently.    
-  4. Traffic management. Traffic congestion can be managed by allowing only light vehicles to travel on a particular road during peak hours.  
+    * Transportation planning for traffic operation and pavement design (Avely et al., 2004). Differences in size, weight, and performance between light and heavy vehicle need to be considered during transportation planning.  
+    * Vehicles’ data collection for safety evaluation purposes. Studies show high percentages of fatal accidents involved heavy vehicles (Avely et al., 2004).  
+    * Road maintenance planning. Road wear is affected by weight of the vehicles and traffic flows (Hjort et al., 2008). Road with high traffic of heavy vehicles need to be maintained more frequently.    
+    * Traffic management. Traffic congestion can be managed by allowing only light vehicles to travel on a particular road during peak hours.  
 5. [Feature Extraction Analysis, Techniques and Issues in Vehicle Types Recognition.pdf](https://github.com/kadiyalamani15/Traffic/blob/master/Traffic%20-%20Research%20Paper%20Project/188217040.pdf)  
 6. [Moving Vehicle Detection for Measuring Traffic Count Using OpenCV.pdf](https://github.com/kadiyalamani15/Traffic/blob/master/Traffic%20-%20Research%20Paper%20Project/20131230030637936.pdf)  
 7. [Vehicle Detection and Speed Estimation for Automated Traffic Surveillance Systems at Night time.pdf](https://github.com/kadiyalamani15/Traffic/blob/master/Traffic%20-%20Research%20Paper%20Project/212493711.pdf)  
